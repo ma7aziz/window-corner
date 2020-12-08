@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Corner </title>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Custom CSS-->
+    <link href="{% static 'css/universal.css' %}" rel="stylesheet">
+</head>
+
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
+    <!-- Preloader-->
+    <div id="preloader">
+        <div id="status"></div>
+    </div>
+    <!-- Navigation-->
+    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse"
+                    class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span
+                        class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a
+                    href="#page-top" class="navbar-brand page-scroll">
+                    <!-- Text or Image logo--><img src="{% static 'img/logo.png' %}" alt="Window Corner "
+                        class="logo"><img src="{% static 'img/logodark.png' %}" alt="Window Corner "
+                        class="logodark"></a>
+            </div>
+            <div class="collapse navbar-collapse navbar-main-collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li><a href="#">Home <span class="caret"></span></a>
+
+                    </li>
+                    <li><a href="#">About Us <span class="caret"></span></a>
+
+                    </li>
+                    <li><a href="#">Products<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Masonry <span class="angle-right"></span><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="portfolio-masonry-2.html">2 columns</a></li>
+                                    <li><a href="portfolio-masonry-3.html">3 columns</a></li>
+                                    <li><a href="portfolio-masonry-4.html">4 columns</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Wide <span class="angle-right"></span><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="portfolio-wide-2.html">2 columns</a></li>
+                                    <li><a href="portfolio-wide-3.html">3 columns</a></li>
+                                    <li><a href="portfolio-wide-4.html">4 columns</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Boxed <span class="angle-right"></span><span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="portfolio-boxed-2.html">2 columns</a></li>
+                                    <li><a href="portfolio-boxed-3.html">3 columns</a></li>
+                                    <li><a href="portfolio-boxed-4.html">4 columns</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="portfolio-single.html">Single project</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">News <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="news2.html">2 columns</a></li>
+                            <li><a href="news2-sidebar.html">2 columns sidebar</a></li>
+                            <li><a href="news3.html">3 columns</a></li>
+                            <li><a href="news4.html">4 columns</a></li>
+                            <li><a href="news-single.html">single fullwidth</a></li>
+                            <li><a href="news-single-sidebar.html">single sidebar</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Blog<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="shop.html">Shop</a></li>
+                            <li><a href="shop2.html">Shop sidebar</a></li>
+                            <li><a href="shop3.html">Shop sidebar wide</a></li>
+                            <li><a href="shop-single.html">Single product</a></li>
+                            <li><a href="shop-cart.html">Shopping cart</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact Us <span class="caret"></span></a>
+
+                    </li>
+                    <!-- <li class="menu-divider visible-lg">&nbsp;</li> -->
+
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    <!-- jQuery-->
+    <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
+    <!-- Bootstrap Core JavaScript-->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Plugin JavaScript-->
+    <script src="{% static 'js/jquery.easing.min.js' %}"></script>
+    <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
+    <script src="{% static 'js/device.min.js' %}"></script>
+    <script src="{% static 'js/form.min.js' %}"></script>
+    <script src="{% static 'js/jquery.placeholder.min.js' %}"></script>
+    <script src="{% static 'js/jquery.shuffle.min.js' %}"></script>
+    <script src="{% static 'js/jquery.parallax.min.js' %}"></script>
+    <script src="{% static 'js/jquery.circle-progress.min.js' %}"></script>
+    <script src="{% static 'js/jquery.swipebox.min.js' %}"></script>
+    <script src="{% static 'js/smoothscroll.min.js' %}"></script>
+    <script src="{% static 'js/wow.min.js' %}"></script>
+    <script src="{% static 'js/jquery.smartmenus.js' %}"></script>
+    <!-- Custom Theme JavaScript-->
+    <script src="{% static 'js/universal.js' %}"></script>
+</body>
+
+</html>

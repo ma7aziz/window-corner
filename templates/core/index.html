@@ -1,0 +1,115 @@
+{% extends '../base.html'%}
+{% load static %}
+{% block content %}
+<header data-background="{% static 'img/header/29.jpg' %}" class="intro introhalf demo-header scroll-background">
+    <!-- Intro Header-->
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h1>Universal<span class="badge hidden-sm hidden-xs">html</span></h1>
+                    <h2 class="no-pad">Smart Multi-purpose Html5 Template</h2>
+                    <p>All live demo pages and documentation are included in the download package</p>
+                    <ul class="list-inline lead">
+                        <li><a href="#multipage" class="btn btn-border btn-lg page-scroll">Choose your demo</a></li>
+                        <li><a target="_top"
+                                href="https://themeforest.net/item/universal-smart-multipurpose-html5-template/17268942"
+                                class="btn btn-white btn-lg">Purchase now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- About-->
+<section id="about" class="bg-dark2 section-small">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>Who We Are</h3>
+                <p>Window Corner has more than 40 years of experience in façade and windows
+                    field. First, we started in 1976 as AluBakir, a family business that offers
+                    aluminum works and fabrications. We were among the first companies to
+                    execute curtain walls and use high-end brands of aluminum profiles. Our aim
+                    has always been to be the ultimate solution provider to reach an optimum
+                    combination in terms of functionality and appearance. In 1998, with the introduction of PVC as an
+                    alternative material into the Egyptian
+                    market, we established a shareholding company called “Online” and extended our product range to
+                    include Aluminum and PVC. Online
+                    was also the first company in Egypt and the Middle East to use Fiberglass. Keeping our vision to
+                    offer the best solution for all sectors,
+                    Window Corner, a new brand, was introduced in 2012. It is specialized in residential facilities to
+                    serve individual clients with all glass
+                    works at home. Window Corner has a high level of customization and a dedicated team to meet each
+                    individual’s own requirements.
+                    We always seek to give an added value and offer our consultation to our clients to build a unique
+                    cozy home.</p>
+                <h2 class="classic">Window Corner</h2>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section-->
+<section id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <h3>contact us</h3>
+                <p>Feel free to contact us. A business has to be involving, it has to be fun, and it has to exercise
+                    your creative instincts. Start where you are. Use what you have. Do what you can. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit.</p>
+                <hr>
+                <h5><i class="fa fa-map-marker fa-fw fa-lg"></i> 1234 Some Avenue, New York, NY 56789
+                </h5>
+                <h5><i class="fa fa-envelope fa-fw fa-lg"></i> <a
+                        href="https://forbetterweb.com/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="f69f989099b68f9983819394859f8293d895999b">[email&#160;protected]</a>
+                </h5>
+                <h5><i class="fa fa-phone fa-fw fa-lg"></i> (123) 456-7890
+                </h5>
+            </div>
+            <div class="col-md-5 col-md-offset-2">
+                <h3>Say hello</h3>
+                <!-- Contact Form - Enter your email address on line 17 of the mail/contact_me.php file to make this form work. For more information on how to do this please visit the Docs!-->
+                <form id="contactForm" name="sentMessage" novalidate="">
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label for="name" class="sr-only control-label">You Name</label>
+                            <input id="name" type="text" placeholder="You Name" required=""
+                                data-validation-required-message="Please enter name" class="form-control input-lg"><span
+                                class="help-block text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label for="email" class="sr-only control-label">You Email</label>
+                            <input id="email" type="email" placeholder="You Email" required=""
+                                data-validation-required-message="Please enter email"
+                                class="form-control input-lg"><span class="help-block text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label for="phone" class="sr-only control-label">You Phone</label>
+                            <input id="phone" type="tel" placeholder="You Phone" required=""
+                                data-validation-required-message="Please enter phone number"
+                                class="form-control input-lg"><span class="help-block text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="control-group">
+                        <div class="form-group floating-label-form-group controls">
+                            <label for="message" class="sr-only control-label">Message</label>
+                            <textarea id="message" rows="2" placeholder="Message" required=""
+                                data-validation-required-message="Please enter a message." aria-invalid="false"
+                                class="form-control input-lg"></textarea><span class="help-block text-danger"></span>
+                        </div>
+                    </div>
+                    <div id="success"></div>
+                    <button type="submit" class="btn btn-dark">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
