@@ -64,7 +64,7 @@ body {
   font: normal 15px/1.8 Raleway, sans-serif;
   letter-spacing: 0.03em;
   color: #444;
-  background-color: #fff;
+  background-color: #F3F3F3;
   -webkit-font-smoothing: antialiased; }
 
 /* Preloader */
@@ -74,7 +74,7 @@ body {
   right: 0;
   bottom: 0;
   position: absolute;
-  background-color: #fff;
+  background-color: #F3F3F3;
   z-index: 99999;
   height: 100%;
   width: 100%;
@@ -226,7 +226,7 @@ section, .section {
   z-index: 992;
   padding-top: 140px;
   padding-bottom: 140px;
-  background-color: #fff; }
+  background-color: #F3F3F3; }
 
 .section-small {
   position: relative;
@@ -476,7 +476,7 @@ a .fa {
   outline: 0;
   background-color: transparent !important; }
   .navbar-custom .nav li.active a {
-    color: #789 !important; }
+    color: #174E9C !important; }
     .navbar-custom .nav li.active a:hover {
       color: #789; }
 
@@ -2026,4 +2026,9 @@ li .shop-cart {
   to {
     background-position: -40000px 0; } }
 
-/*# sourceMappingURL=universal.css.map */
+
+
+.product-title {
+  padding-top : 20px ;
+  font-size: 1.2em ;
+}
