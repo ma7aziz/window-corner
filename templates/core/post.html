@@ -1,0 +1,120 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Header-->
+<header data-background="{% static 'img/header/9.jpg' %}" class="intro introhalf">
+    <!-- Intro Header-->
+    <div class="intro-body">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-md-offset-1">
+                    <h4>Home / Latest news / March 12, 2020</h4>
+                    <h2>{{post.title}}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<section id="news-single" class="section-small">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+
+                <h4>{{post.summary}}</h4>
+                <div id="carousel-news" class="carousel slide carousel-fade">
+                    <ol class="carousel-indicators indicators-inside">
+                        <li data-target="#carousel-news" data-slide-to="0" class="active"></li>
+                        {% if post.image1 %}
+                        <li data-target="#carousel-news" data-slide-to="1"></li>
+                        {% endif %}
+                        {% if post.image2 %}
+                        <li data-target="#carousel-news" data-slide-to="2"></li>
+                        {% endif %}
+                        {% if post.image3 %}
+                        <li data-target="#carousel-news" data-slide-to="3"></li>
+                        {% endif %}
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active"><img src="{{post.main_image.url}}" alt="" class="img-responsive"></div>
+                        {% if post.image1 %}
+                        <div class="item"><img src="{{post.image1.url}}" alt="" class="img-responsive"></div>
+                        {% endif %}
+                        {% if post.image2 %}
+                        <div class="item"><img src="{{post.image2.url}}" alt="" class="img-responsive"></div>
+                        {% endif %}
+                        {% if post.image3 %}
+                        <div class="item"><img src="{{post.image3.url}}" alt="" class="img-responsive"></div>
+                        {% endif %}
+
+                    </div><a href="#carousel-news" data-slide="prev" class="left carousel-control"><span
+                            class="icon-prev"></span></a><a href="#carousel-news" data-slide="next"
+                        class="right carousel-control"><span class="icon-next"></span></a>
+                </div>
+                {{post.body|safe}}
+
+            </div>
+            <div class="col-md-3 col-md-offset-1">
+                <!-- <h4>search</h4>
+                <form action="#" method="post" class="form-inline subscribe-form">
+                    <div class="input-group input-group-lg">
+                        <input type="search" name="search" placeholder="Search..." class="form-control"><span
+                            class="input-group-btn">
+                            <button type="submit" name="search" class="btn btn-dark"><i
+                                    class="fa fa-search fa-lg"></i></button></span>
+                    </div>
+                </form>
+                <hr> -->
+                <!-- <h4>categories</h4>
+                <ul class="list-unstyled">
+                    <li><a href="#">Design</a></li>
+                    <li><a href="#">Frameworks</a></li>
+                    <li><a href="#">Lifestyle</a></li>
+                    <li><a href="#">Fashion</a></li>
+                    <li><a href="#">Web Development</a></li>
+                    <li><a href="#">Front End</a></li>
+                </ul> -->
+                <!-- <hr>
+                <h4>Partners</h4>
+                <div class="row no-pad">
+                    <div class="col-md-6 col-sm-3">
+                        <p><a href="client-single.html"><img src="img/clients/logo1.png" alt=""
+                                    class="img-responsive"></a></p>
+                    </div>
+                    <div class="col-md-6 col-sm-3">
+                        <p><a href="client-single.html"><img src="img/clients/logo3.png" alt=""
+                                    class="img-responsive"></a></p>
+                    </div>
+                    <div class="col-md-6 col-sm-3">
+                        <p><a href="client-single.html"><img src="img/clients/logo5.png" alt=""
+                                    class="img-responsive"></a></p>
+                    </div>
+                    <div class="col-md-6 col-sm-3">
+                        <p><a href="client-single.html"><img src="img/clients/logo6.png" alt=""
+                                    class="img-responsive"></a></p>
+                    </div>
+                </div>
+                <hr>
+                <h4>subscribe</h4>
+                <p>Sign up with your email address to receive news and updates.</p> -->
+                <!-- MailChimp Signup Form - Replace the form action in the line below with your MailChimp embed action! For more information on how to do this please visit the Docs!-->
+                <!-- <form id="mc-embedded-subscribe-form"
+                    action="https://forbetterweb.us11.list-manage.com/subscribe/post?u=4f751a6c58b225179404715f0&amp;id=18fc72763a"
+                    method="post" name="mc-embedded-subscribe-form" target="_blank" novalidate=""
+                    class="form-inline subscribe-form">
+                    <div class="input-group input-group-lg">
+                        <input id="mce-EMAIL" type="email" name="EMAIL" placeholder="Email address..."
+                            class="form-control"><span class="input-group-btn">
+                            <button id="mc-embedded-subscribe" type="submit" name="subscribe"
+                                class="btn btn-dark">go</button></span>
+                        <div id="mce-responses"></div>
+                        <div id="mce-error-response" style="display:none" class="response"></div>
+                        <div id="mce-success-response" style="display:none" class="response"></div>
+                    </div>
+                </form> -->
+                <!-- End MailChimp Signup Form-->
+                <!-- <img src="img/misc/mailchimp.png" alt=""> -->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
