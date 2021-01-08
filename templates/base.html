@@ -5,11 +5,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Window Corner </title>
+    <title>Window Corner
+        {% block title%} {% endblock %}
+    </title>
+    <link rel="icon" href="{% static 'img/ico.png' %}" type="image/icon type">
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Custom CSS-->
     <link href="{% static 'css/universal.css' %}" rel="stylesheet">
 </head>
+<style>
+    ::marker {
+        color: transparent
+    }
+
+    .btn {
+        border-radius: 6px !important
+    }
+</style>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" class="top">
     <!-- Preloader-->
@@ -23,11 +35,12 @@
                 <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse"
                     class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span
                         class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a href="#page-top" class="navbar-brand page-scroll" style="color: #174E9C;">
-                    <!-- Text or Image logo--> Window Corner
-                    <!-- <img src="{% static 'img/logo.png' %}" alt="Window Corner "
-                        class="logo"><img src="{% static 'img/logodark.png' %}" alt="Window Corner "
-                        class="logodark"> -->
+                <a href="{% url 'index' %}" class="navbar-brand page-scroll" style="color: #174E9C;">
+                    <!-- Text or Image logo-->
+                    <!-- <img src="{% static 'img/window.png' %}" alt="Window Corner " class="logo"><img
+                        src="{% static 'img/window.png' %}" alt="Window Corner " class="logodark"
+                        style=" height : 100%"> -->
+                    WINDOW CORNER
                 </a>
             </div>
             <div class="collapse navbar-collapse navbar-main-collapse">
@@ -39,18 +52,22 @@
                     <li><a href="{%url 'about' %}">About Us <span class="caret"></span></a>
 
                     </li>
-                    <li><a href="#">Products<span class="caret"></span></a>
-                    </li>
+                    <!-- <li><a href="#">Products<span class="caret"></span></a>
+                    </li> -->
                     <li><a href="{% url 'news' %}">News <span class="caret"></span></a>
 
                     </li>
-                    <!-- <li><a href="#">Blog<span class="caret"></span></a> -->
 
-                    </li>
                     <li><a href="{% url 'contact' %}">Contact Us <span class="caret"></span></a>
 
                     </li>
-                    <!-- <li class="menu-divider visible-lg">&nbsp;</li> -->
+                    <li class="menu-divider visible-lg">&nbsp;</li>
+                    <li><a href="{% static 'wincon-catalogue.pdf'%}" target="_blank"
+                            style="color:#174E9C ; font-weight:bold ; font-size : 1.2em">Catalogue
+                        </a>
+
+                    </li>
+
 
 
 
@@ -73,7 +90,7 @@
                     <li><a href="/"><i class="fa fa-linkedin fa-fw fa-2x"></i></a></li>
                 </ul>
 
-                <p class="small"><a href="http://ForBetterWeb.com">©2020 <i class="fa fa-heart fa-fw"></i>Brain
+                <p class="small"><a href="">©2020 <i class="fa fa-heart fa-fw"></i>Brain
                         Analytica </a></p>
             </div>
         </div>

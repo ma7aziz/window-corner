@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %}| {{post.title.capitalize}}{% endblock %}
 {% block content %}
 <!-- Header-->
 <header data-background="{% static 'img/header/9.jpg' %}" class="intro introhalf">

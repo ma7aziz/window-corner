@@ -265,6 +265,7 @@ section, .section {
   text-shadow: none;
   text-decoration: none;
   font-weight: 600;
+  border-radius : 5px;
   padding: 8px 12px 6px 15px; }
 
 .btn-lg {
@@ -896,13 +897,13 @@ a.btn-nav .btn {
   background: url(../img/header/17.jpg); }
 
 .bg-img3 {
-  background: url(../img/header/13.jpg); }
+  background: url(../img/gallery/9.jpg); }
 
 .bg-img4 {
   background: url(../img/header/10.jpg); }
 
 .bg-img5 {
-  background: url(../img/header/18.jpg); }
+  background: url(../img/win-pattern.jpg); }
 
 .bg-img, .bg-img2, .bg-img3, .bg-img4, .bg-img5 {
   background-attachment: fixed;

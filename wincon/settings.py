@@ -82,7 +82,6 @@ WSGI_APPLICATION = 'wincon.wsgi.application'
 #     }
 # }
 
-. . .
 
 DATABASES = {
     'default': {
@@ -95,7 +94,6 @@ DATABASES = {
     }
 }
 
-. . .
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators

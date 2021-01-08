@@ -1,5 +1,6 @@
 {% extends '../base.html'%}
 {% load static %}
+{% block title %} {% endblock %}
 {% block content %}
 <header data-background="{% static 'img/header/29.jpg' %}" class="intro introhalf demo-header scroll-background">
     <!-- Intro Header-->
@@ -10,13 +11,11 @@
                     <h1>Window Corner
                         <!-- <span class="badge hidden-sm hidden-xs">html</span> -->
                     </h1>
-                    <h2 class="no-pad">Lorem ipsum dolor sit amet.</h2>
-                    <p>All live demo pages and documentation are included in the download package</p>
+                    <h2 class="no-pad">Customized privacy solutions .</h2>
+                    <p>We commit to our values for decades now and decades yet to come.</p>
                     <ul class="list-inline lead">
-                        <li><a href="#multipage" class="btn btn-border btn-lg page-scroll">About Us</a></li>
-                        <li><a target="_top"
-                                href="https://themeforest.net/item/universal-smart-multipurpose-html5-template/17268942"
-                                class="btn btn-white btn-lg">Our Products </a></li>
+                        <li><a href="{% url 'about' %}" class="btn btn-border btn-lg page-scroll">About Us</a></li>
+                        <li><a target="_top" href="" class="btn btn-white btn-lg">Our Products </a></li>
                     </ul>
                 </div>
             </div>
@@ -24,7 +23,7 @@
     </div>
 </header>
 <!-- About-->
-<section id="about" class="bg-dark2 section-small" style="background-color:#174E9C; color:#A9AABC">
+<section id="about" class="bg-dark2 section-small " style="background-color:#174E9C; color:#A9AABC">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -47,7 +46,7 @@
                     We always seek to give an added value and offer our consultation to our clients to build a unique
                     cozy home.</p>
                 <h2 class="classic">Window Corner</h2>
-                <li><a href="" class="btn btn-border btn-lg page-scroll">About Us </a></li>
+                <li><a href="{% url 'about' %}" class="btn btn-border btn-lg page-scroll">About Us </a></li>
             </div>
         </div>
     </div>
@@ -57,8 +56,9 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h3>Our products </h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis pulvinar vestibulum. Donec
-                    eleifend, sem sed dictum. Lorem ipsum dolor sit amet, consectetur adipiscing elit.s</p>
+                <p>Window Corner is a fabricator, capable of using all kinds of products to fulfil
+                    the client’s desire in terms of Aesthetics, Safety & Security, Performance and Cost Optimization.
+                    We have worked with more than 50 gated community compounds around Egypt including the most</p>
             </div>
         </div>
         <div class="row">
@@ -140,7 +140,9 @@
 
 
         </div>
-        <li><a href="" class="btn btn-white btn-lg bg-dark">Read More </a></li>
+        <li><a href="{% static 'wincon-catalogue.pdf' %}" class="btn btn-white btn-lg bg-dark"
+                style="padding-top: 15px ; padding-bottom: 15px; font-size: 1.2em">Check Our Catalogue</a>
+        </li>
     </div>
 </section>
 <!-- Quotes-->
@@ -150,9 +152,12 @@
         <div class="row">
             <div class="col-sm-8 col-sm-offset-2">
                 <p><i class="icon fa fa-quote-left fa-lg"></i></p>
-                <p>Teach self-denial and make its practice pleasure, and you can create for the world a destiny more
-                    sublime that ever issued from the brain of the wildest dreamer.</p>
-                <h2 class="no-pad classic">Sir Walter Scott</h2>
+                <p>Window Corner is a brand made exclusively for individuals to be able to receive a well-tailored
+                    solution depending on their own
+                    house. Our key values are Trust and Integrity. We work on building a long term relationship with our
+                    clients to play a partner and
+                    advisor role on all levels starting from design till after-sales maintenance.</p>
+                <!-- <h2 class="no-pad classic">Sir Walter Scott</h2> -->
             </div>
         </div>
     </div>
@@ -162,21 +167,16 @@
     <div class="container text-center">
         <div class="row">
             <div class="col-sm-10 col-sm-offset-1">
-                <h3>Latest Works</h3>
-                <!-- <ul class="portfolio-sorting list-inline text-center">
-                    <li><a href="portfolio-single.html" data-group="all" class="active">All</a></li>
-                    <li><a href="portfolio-single.html" data-group="people">people</a></li>
-                    <li><a href="portfolio-single.html" data-group="nature">nature</a></li>
-                    <li><a href="portfolio-single.html" data-group="architecture">Architecture</a></li>
-                </ul> -->
+                <h3>Gallary</h3>
+
             </div>
         </div>
     </div>
     <div class="container-fluid">
         <div id="grid" class="row portfolio-items">
             <div data-groups="[&quot;architecture&quot;]" class="col-md-3 col-sm-6">
-                <div class="portfolio-item"><a href="{% static 'img/portfolio/photo/2.jpg' %}" title="Photo Caption"
-                        class="swipebox"><img src="{% static 'img/portfolio/photo/2.jpg' %}" alt="">
+                <div class="portfolio-item"><a href="{% static 'img/gallery/1.png' %}" title="Photo Caption"
+                        class="swipebox"><img src="{% static 'img/gallery/1.png' %}" alt="">
                         <div class="portfolio-overlay">
                             <div class="caption">
                                 <h5>Photo Caption</h5><span>Lorem ipsum dolor sit amet</span>
@@ -185,8 +185,8 @@
                     </a></div>
             </div>
             <div data-groups="[&quot;architecture&quot;]" class="col-md-3 col-sm-6">
-                <div class="portfolio-item"><a href="{% static 'img/portfolio/photo/4.jpg' %}" title="Photo Caption"
-                        class="swipebox"><img src="{% static 'img/portfolio/photo/4.jpg' %}" alt="">
+                <div class="portfolio-item"><a href="{% static 'img/gallery/2.jpg' %}" title="Photo Caption"
+                        class="swipebox"><img src="{% static 'img/gallery/2.jpg' %}" alt="">
                         <div class="portfolio-overlay">
                             <div class="caption">
                                 <h5>Photo Caption</h5><span>Lorem ipsum dolor sit amet</span>
@@ -195,8 +195,8 @@
                     </a></div>
             </div>
             <div data-groups="[&quot;architecture&quot;]" class="col-md-3 col-sm-6">
-                <div class="portfolio-item"><a href="{% static 'img/products/windows.jpg' %}" title="Photo Caption"
-                        class="swipebox"><img src="{% static 'img/products/windows.jpg' %}" alt="">
+                <div class="portfolio-item"><a href="{% static 'img/gallery/3.jpg' %}" title="Photo Caption"
+                        class="swipebox"><img src="{% static 'img/gallery/3.jpg' %}" alt="">
                         <div class="portfolio-overlay">
                             <div class="caption">
                                 <h5>Photo Caption</h5><span>Lorem ipsum dolor sit amet</span>
@@ -205,8 +205,8 @@
                     </a></div>
             </div>
             <div data-groups="[&quot;architecture&quot;]" class="col-md-3 col-sm-6">
-                <div class="portfolio-item"><a href="{% static 'img/products/curtain-wall.jpg' %}" title="Photo Caption"
-                        class="swipebox"><img src="{% static 'img/products/curtain-wall.jpg' %}" alt="">
+                <div class="portfolio-item"><a href="{% static 'img/gallery/4.jpg' %}" title="Photo Caption"
+                        class="swipebox"><img src="{% static 'img/gallery/4.jpg' %}" alt="">
                         <div class="portfolio-overlay">
                             <div class="caption">
                                 <h5>Photo Caption</h5><span>Lorem ipsum dolor sit amet</span>
@@ -215,35 +215,61 @@
                     </a></div>
             </div>
             <div data-groups="[&quot;architecture&quot;]" class="col-md-3 col-sm-6">
-                <div class="portfolio-item"><a href="{% static 'img/products/handrail.jpg' %}" title="Photo Caption"
-                        class="swipebox"><img src="{% static 'img/products/handrail.jpg' %}" alt="">
+                <div class="portfolio-item"><a href="{% static 'img/gallery/5.jpg' %}" title="Photo Caption"
+                        class="swipebox"><img src="{% static 'img/gallery/5.jpg' %}" alt="">
                         <div class="portfolio-overlay">
                             <div class="caption">
                                 <h5>Photo Caption</h5><span>Lorem ipsum dolor sit amet</span>
                             </div>
                         </div>
-                    </a></div>
+                    </a>
+                </div>
             </div>
             <div data-groups="[&quot;architecture&quot;]" class="col-md-3 col-sm-6">
-                <div class="portfolio-item"><a href="{% static 'img/products/shower.jpg' %}" title="Photo Caption"
-                        class="swipebox"><img src="{% static 'img/products/shower.jpg' %}" alt="">
+                <div class="portfolio-item"><a href="{% static 'img/gallery/6.jpg' %}" title="Photo Caption"
+                        class="swipebox"><img src="{% static 'img/gallery/6.jpg' %}" alt="">
                         <div class="portfolio-overlay">
                             <div class="caption">
                                 <h5>Photo Caption</h5><span>Lorem ipsum dolor sit amet</span>
                             </div>
                         </div>
-                    </a></div>
+                    </a>
+                </div>
             </div>
             <div data-groups="[&quot;architecture&quot;]" class="col-md-3 col-sm-6">
-                <div class="portfolio-item"><a href="{% static 'img/products/skylight.jpg' %}" title="Photo Caption"
-                        class="swipebox"><img src="{% static 'img/products/skylight.jpg' %}" alt="">
+                <div class="portfolio-item"><a href="{% static 'img/gallery/7.jpg' %}" title="Photo Caption"
+                        class="swipebox"><img src="{% static 'img/gallery/7.jpg' %}" alt="">
                         <div class="portfolio-overlay">
                             <div class="caption">
                                 <h5>Photo Caption</h5><span>Lorem ipsum dolor sit amet</span>
                             </div>
                         </div>
-                    </a></div>
+                    </a>
+                </div>
             </div>
+            <div data-groups="[&quot;architecture&quot;]" class="col-md-3 col-sm-6">
+                <div class="portfolio-item"><a href="{% static 'img/gallery/8.jpg' %}" title="Photo Caption"
+                        class="swipebox"><img src="{% static 'img/gallery/8.jpg' %}" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="caption">
+                                <h5>Photo Caption</h5><span>Lorem ipsum dolor sit amet</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div data-groups="[&quot;architecture&quot;]" class="col-md-3 col-sm-6">
+                <div class="portfolio-item"><a href="{% static 'img/gallery/9.jpg' %}" title="Photo Caption"
+                        class="swipebox"><img src="{% static 'img/gallery/9.jpg' %}" alt="">
+                        <div class="portfolio-overlay">
+                            <div class="caption">
+                                <h5>Photo Caption</h5><span>Lorem ipsum dolor sit amet</span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
 
 
         </div>
