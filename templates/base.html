@@ -29,13 +29,13 @@
         <div id="status"></div>
     </div>
     <!-- Navigation-->
-    <nav class="navbar navbar-custom navbar-fixed-top top-nav-collapse">
+    <nav class="navbar navbar-universal navbar-custom navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" data-toggle="collapse" data-target=".navbar-main-collapse"
                     class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span
                         class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
-                <a href="{% url 'index' %}" class="navbar-brand page-scroll" style="color: #174E9C;">
+                <a href="{% url 'index' %}" class="navbar-brand page-scroll">
                     <!-- Text or Image logo-->
                     <!-- <img src="{% static 'img/window.png' %}" alt="Window Corner " class="logo"><img
                         src="{% static 'img/window.png' %}" alt="Window Corner " class="logodark"
@@ -63,7 +63,7 @@
                     </li>
                     <li class="menu-divider visible-lg">&nbsp;</li>
                     <li><a href="{% static 'wincon-catalogue.pdf'%}" target="_blank"
-                            style="color:#174E9C ; font-weight:bold ; font-size : 1.2em">Catalogue
+                            style=" font-weight:bold ; font-size : 1.2em">Catalogue
                         </a>
 
                     </li>
@@ -77,8 +77,39 @@
     </nav>
     {% block content %}
     {% endblock %}
+    <!-- Footer Section-->
+    <section class="section-small footer bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h5>About</h5>
+                    <p>Window Corner has more than 40 years of experience in façade and windows
+                        field. First, we started in 1976 as AluBakir, a family business that offers
+                        aluminum works and fabrications.</p>
+                </div>
+                <div class="col-sm-2 col-sm-offset-1 footer-menu">
+                    <h5>Company</h5>
+                    <h6 class="no-pad"><a href="">Our Services</a></h6>
+                    <h6 class="no-pad"><a href="">Our Clients</a></h6>
+                    <h6 class="no-pad"><a href="{% url 'contact' %}">Contact Us</a></h6>
+
+                </div>
+                <div class="col-sm-2 footer-menu">
+                    <h5>&nbsp;</h5>
+                    <h6 class="no-pad"><a href="{% url 'about' %}">About us</a></h6>
+                    <h6 class="no-pad"><a href="">Portfolio</a></h6>
+                    <!-- <h6 class="no-pad"><a href="">Our Team</a></h6> -->
+                    <!-- <h6 class="no-pad"><a href="register.html">Register</a></h6> -->
+                </div>
+                <div class="col-sm-3 text-right">
+                    <h5>Our Clients </h5><span data-min="0" data-max="1258" data-delay="5" data-increment="3"
+                        class="numscroller">0</span>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- footer small-->
-    <div class="container-fluid footer-small bg-dark text-center">
+    <!-- <div class="container-fluid footer-small bg-dark text-center">
         <div class="row">
 
             <div class="col-md-8 col-md-offset-2">
@@ -96,12 +127,37 @@
                         Analytica </a></p>
             </div>
         </div>
-    </div>
+    </div> -->
+    <section class="section-small footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h6>Powered By <a href="http://braineg.com"> Brain Analytica</a>
+                    </h6>
+                </div>
+                <div class="col-sm-3 col-sm-offset-1">
+
+                </div>
+                <div class="col-sm-3 col-sm-offset-1 text-right">
+                    <ul class="list-inline">
+                        <li><a href="/"><i class="fa fa-twitter fa-fw fa-lg"></i></a></li>
+                        <li><a href="https://facebook.com/window-corner" target="_blank"><i
+                                    class="fa fa-facebook fa-fw fa-lg"></i></a></li>
+                        <li><a href="https://instagram.com/window-corner"><i
+                                    class="fa fa-instagram fa-fw fa-lg"></i></a>
+                        </li>
+                        <li><a href="/"><i class="fa fa-linkedin fa-fw fa-lg"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- jQuery-->
     <script src="{% static 'js/jquery-1.12.4.min.js' %}"></script>
     <!-- Bootstrap Core JavaScript-->
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
     <!-- Plugin JavaScript-->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&callback=initialize"></script>
     <script src="{% static 'js/jquery.easing.min.js' %}"></script>
     <script src="{% static 'js/jquery.countdown.min.js' %}"></script>
     <script src="{% static 'js/device.min.js' %}"></script>
@@ -114,6 +170,8 @@
     <script src="{% static 'js/smoothscroll.min.js' %}"></script>
     <script src="{% static 'js/wow.min.js' %}"></script>
     <script src="{% static 'js/jquery.smartmenus.js' %}"></script>
+    <script src="{% static 'js/map-darak.js' %}"></script>
+    <script src="{% static 'js/map.js' %}"></script>
     <!-- Custom Theme JavaScript-->
     <script src="{% static 'js/universal.js' %}"></script>
 </body>
