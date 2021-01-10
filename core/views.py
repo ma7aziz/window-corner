@@ -6,7 +6,8 @@ from .models import Post, Product
 
 def index(request):
     posts = Post.objects.all().order_by('-timestamp')[:3]
-    return render(request, 'core/index.html', {'posts': posts})
+    products = Product.objects.all()
+    return render(request, 'core/index.html', {'posts': posts, 'products': products})
 
 
 def about(request):
