@@ -24,3 +24,7 @@ def news(request):
 def post(request, slug):
     post = Post.objects.get(slug=slug)
     return render(request, 'core/post.html', {'post': post})
+
+
+def products(request):
+    return render(request, 'products/products.html',)
