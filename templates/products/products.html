@@ -27,71 +27,18 @@
     </div>
     <div class="container-fluid">
         <div id="grid" class="row portfolio-items">
+            {% for product in products %}
             <div data-groups="[&quot;design&quot;, &quot;branding&quot;]" class="col-md-3 col-sm-6 no-pad">
-                <div class="portfolio-item"><a href="portfolio-single.html"><img
-                            src="{% static 'img/portfolio/1.jpg' %}" alt="">
+                <div class="portfolio-item"><a href="{% url 'product' product.name %}"><img
+                            src="{{product.main_image.url}}" alt="">
                         <div class="portfolio-overlay">
                             <div class="caption">
-                                <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
+                                <h5>{{product.name}}</h5>
                             </div>
                         </div>
                     </a></div>
             </div>
-            <div data-groups="[&quot;photo&quot;, &quot;branding&quot;]" class="col-md-3 col-sm-6 no-pad">
-                <div class="portfolio-item"><a href="portfolio-single.html"><img
-                            src="{% static 'img/portfolio/2.jpg' %}" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="caption">
-                                <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
-                            </div>
-                        </div>
-                    </a></div>
-            </div>
-            <div data-groups="[&quot;photo&quot;, &quot;branding&quot;]" class="col-md-3 col-sm-6 no-pad">
-                <div class="portfolio-item"><a href="portfolio-single.html"><img
-                            src="{% static 'img/portfolio/3.jpg' %}" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="caption">
-                                <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
-                            </div>
-                        </div>
-                    </a></div>
-            </div>
-            <div data-groups="[&quot;photo&quot;, &quot;branding&quot;]" class="col-md-3 col-sm-6 no-pad">
-                <div class="portfolio-item"><a href="portfolio-single.html"><img
-                            src="{% static 'img/portfolio/4.jpg' %}" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="caption">
-                                <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
-                            </div>
-                        </div>
-                    </a></div>
-            </div>
-
-
-            <div data-groups="[&quot;photo&quot;, &quot;branding&quot;]" class="col-md-3 col-sm-6 no-pad">
-                <div class="portfolio-item"><a href="portfolio-single.html"><img
-                            src="{% static 'img/portfolio/5.jpg' %}" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="caption">
-                                <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
-                            </div>
-                        </div>
-                    </a></div>
-            </div>
-
-            <div data-groups="[&quot;photo&quot;, &quot;branding&quot;]" class="col-md-3 col-sm-6 no-pad">
-                <div class="portfolio-item"><a href="portfolio-single.html"><img
-                            src="{% static 'img/portfolio/6.jpg' %}" alt="">
-                        <div class="portfolio-overlay">
-                            <div class="caption">
-                                <h5>Form Image Creative</h5><span>Lorem ipsum dolor sit amet</span>
-                            </div>
-                        </div>
-                    </a></div>
-            </div>
-
-
+            {% endfor %}
 
 
 

@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from .models import Post
+from .models import Post, Product
+
 # Create your views here.
 
 
@@ -27,4 +28,11 @@ def post(request, slug):
 
 
 def products(request):
-    return render(request, 'products/products.html',)
+    products = Product.objects.all()
+    return render(request, 'products/products.html', {'products': products})
+
+
+def single_product(request, name):
+    product = Product.objects.get(name=name)
+
+    return render(request, 'products/single.html', {'product': product})

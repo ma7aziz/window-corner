@@ -19,3 +19,17 @@ class Post(models.Model):
 
     class Meta:
         verbose_name_plural = "Post"
+
+
+class Product(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    description = RichTextField()
+    main_image = models.ImageField(upload_to='products/')
+    image1 = models.ImageField(upload_to='posts/', null=True, blank=True)
+    image2 = models.ImageField(upload_to='posts/', null=True, blank=True)
+    image3 = models.ImageField(upload_to='posts/', null=True, blank=True)
+    image4 = models.ImageField(upload_to='posts/', null=True, blank=True)
+    image5 = models.ImageField(upload_to='posts/', null=True, blank=True)
+
+    def __str__(self):
+        return self.name
