@@ -224,8 +224,8 @@ a img:hover {
 section, .section {
   position: relative;
   z-index: 992;
-  padding-top: 140px;
-  padding-bottom: 140px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   background-color: #F3F3F3; }
 
 .section-small {
@@ -303,6 +303,12 @@ section, .section {
   border: 2px solid #18191B;
   background-color: #18191B;
   color: #fff !important; }
+
+  .btn-blue {
+    border: 2px solid #174E9C;
+  background-color: #174E9C;
+  color: #fff !important;
+  }
 
 .btn-universal {
   border: 2px solid #789;
@@ -403,7 +409,11 @@ a .fa {
     background-color: #fff;
     border-bottom: 1px solid #eee; }
   .navbar-custom.top-nav-collapse a {
-    color: #000; }
+    color: #174E9C;
+   }
+   .navbar-custom.top-nav-collapse a:hover{
+     color:#ccc !important;
+   }
   .navbar-custom.top-nav-collapse .navbar-brand {
     font-size: 22px;
     padding-top: 16px; }
@@ -476,10 +486,14 @@ a .fa {
 .navbar-custom .nav li.active {
   outline: 0;
   background-color: transparent !important; }
-  .navbar-custom .nav li.active a {
-    color: #174E9C !important; }
+
+  /* .navbar-custom .nav li.active a {
+    color: #174E9C !important; } */
     .navbar-custom .nav li.active a:hover {
       color: #789; }
+
+      .navbar-custom .nav li a:hover {
+        color: #174E9C; }
 
 .dropdown-menu {
   background-color: rgba(255, 255, 255, 0.97);
@@ -852,7 +866,9 @@ a.btn-nav .btn {
 
 .bg-gray2 {
   background-color: #E8E8E8; }
-
+.bg-blue {
+  background-color : #174E9C;
+}
 .bg-transparent {
   background-color: transparent; }
 
