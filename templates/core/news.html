@@ -2,6 +2,16 @@
 {% load static  %}
 
 {% block content %}
+<style>
+    a {
+        color: #174E9C !important;
+
+    }
+
+    a:hover {
+        color: #174e9cb2 !important;
+    }
+</style>
 <header data-background="{% static 'img/pattern.jpg' %} " class="intro introhalf">
     <!-- Intro Header-->
     <div class="intro-body">
@@ -10,7 +20,7 @@
     </div>
 </header>
 <!-- News Block-->
-<section id="news" class="section-small">
+<section id="news" class="section-small" style="color: #174E9C;">
     <div class="container">
         <h3 class="pull-left">News</h3>
         <div class="pull-right">
@@ -26,7 +36,7 @@
                 </a>
                 <p>Lorem ipsum dolor sit amet, consectetur elit. Nulla convallis pulvinar vestibulum. Donec eleifend,
                     sem sed dictum mattis, turpis purus placerat</p><a href="/news/{{post.slug}}"
-                    class="btn btn-gray btn-xs">Read more</a>
+                    class="btn btn-blue btn-xs">Read more</a>
             </div>
             {% endfor %}
 
